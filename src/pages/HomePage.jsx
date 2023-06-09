@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import ProductList from "../components/ProductList";
 import "../components/HomePage.css";
-import beats from "../assets/beats.png";
-import ring from "../assets/ring.png";
-import dot from "../assets/dot.png";
 import Banner from "../components/Banner";
 import HomeCard from "../components/HomeCard";
 import grid1 from "../assets/home_grid_1.jpg";
@@ -15,29 +11,11 @@ import grid6 from "../assets/home_grid_6.jpg";
 import grid7 from "../assets/home_grid_7.jpg";
 import grid8 from "../assets/home_grid_8.jpg";
 import grid9 from "../assets/banner_image_2.jpg";
+import ShopByCategory from "../components/ShopByCategory";
+import BestSellers from "../components/BestSellers";
+import footer from "../assets/banner_image.jpg";
 
-function HomePage({ addToCart }) {
-  const products = [
-    {
-      id: 1,
-      name: "Beats Studio3 Wireless",
-      price: 328.5,
-      image: beats,
-    },
-    {
-      id: 2,
-      name: "Echo Dot (3rd Gen) smart speaker",
-      price: 29.0,
-      image: dot,
-    },
-    {
-      id: 3,
-      name: "Ring Video Doorbell 3",
-      price: 199.0,
-      image: ring,
-    },
-  ];
-
+function HomePage() {
   return (
     <div>
       <Banner />
@@ -76,8 +54,13 @@ function HomePage({ addToCart }) {
           </div>
         </div>
       </div>
+      <div className="carousel-category-container">
+        <ShopByCategory />
+      </div>
 
-      <ProductList products={products} addToCart={addToCart} />
+      <BestSellers />
+
+      <img src={footer} />
     </div>
   );
 }
