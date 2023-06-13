@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
 import ShopPage from "./pages/ShopPage";
+import ProductPage from "./components/ProductPage";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   useEffect(() => {
@@ -81,6 +83,17 @@ function App() {
               />
             }
           />
+          <Route
+            path="/Search?"
+            element={
+              <SearchPage
+                addToCart={addToCart}
+                updateCartItemCount={updateCartItemCount}
+              />
+            }
+          />
+
+          <Route path="/product/:id" element={<ProductPage />} />
           <Route
             path="/Shop"
             element={

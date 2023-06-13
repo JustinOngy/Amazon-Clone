@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../components/HomePage.css";
 import Banner from "../components/Banner";
 import HomeCard from "../components/HomeCard";
@@ -60,7 +60,7 @@ function HomePage() {
 
       <BestSellers />
 
-      <img src={footer} />
+      <img className="footer" src={footer} />
     </div>
   );
 }
