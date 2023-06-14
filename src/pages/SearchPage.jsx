@@ -1,8 +1,9 @@
 import React from "react";
 import ProductData from "../components/ProductData";
+import { Link } from "react-router-dom";
 import "../components/SearchPage.css";
 
-const SearchPage = () => {
+const SearchPage = ({ addToCart }) => {
   return (
     <div className="search-container">
       {Object.keys(ProductData).map((category) => (
@@ -12,18 +13,21 @@ const SearchPage = () => {
               <div className="image-bg">
                 <img
                   src={product.image}
-                  alt={product.name}
+                  alt={product.sname}
                   className="product-image"
                 />
               </div>
-
               <div className="product-details">
                 <h3 className="product-name">{product.name}</h3>
                 <span className="product-price">
                   ${product.price.toFixed(2)}
                 </span>
-                <button className="add-to-cart-button">Add to Cart</button>
               </div>
+              <button
+                className="add-to-cart-button"
+                onClick={() => addToCart(product)}>
+                Add to Cart
+              </button>
             </div>
           ))}
         </div>

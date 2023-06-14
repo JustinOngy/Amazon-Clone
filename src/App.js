@@ -93,7 +93,15 @@ function App() {
             }
           />
 
-          <Route path="/product/:id" element={<ProductPage />} />
+          <Route
+            path="/products/:id"
+            element={
+              <ProductPage
+                addToCart={addToCart}
+                updateCartItemCount={updateCartItemCount}
+              />
+            }
+          />
           <Route
             path="/Shop"
             element={
