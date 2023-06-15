@@ -57,10 +57,10 @@ function HomePage() {
       <div className="carousel-category-container">
         <ShopByCategory />
       </div>
-
       <BestSellers />
-
-      <img className="footer" src={footer} />
+      <div className="footer-bg">
+        <img className="footer" src={footer} />
+      </div>
     </div>
   );
 }
