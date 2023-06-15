@@ -5,7 +5,7 @@ import ProductData from "../components/ProductData";
 
 function ShopPage({ addToCart }) {
   return (
-    <div>
+    <div className="shop-bg">
       <h1 className="big-title">Today's Deals</h1>
       <h2 className="shop-title">Electronics</h2>
       <ProductList products={ProductData.electronics} addToCart={addToCart} />
